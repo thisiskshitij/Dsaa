@@ -1,0 +1,22 @@
+Array Problem statements -
+
+Merge two arrays- done
+search element-done
+delete element-done
+sort array-done
+rotate array-done
+find max min in an array-done
+find uniq elements in array-done
+merge two arrays into third with alternate elements -done
+
+find frequency of an element - q
+sort even indexed element in asc and odd in desc -q
+remove duplicates from array and merge
+reads two sets of strings from the user, merges them into a single array,
+merge n arrays
+
+
+
+extras - 
+    learn to sort in descending order
+    

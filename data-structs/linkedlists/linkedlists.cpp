@@ -21,6 +21,7 @@ void insertAtHead(Node *&head, int data)
     head = temp;
 };
 
+
 void display(Node *&head)
 {
     Node *temp = head;
@@ -31,6 +32,9 @@ void display(Node *&head)
     }
     cout << endl;
 }
+
+
+
 
 int main()
 {

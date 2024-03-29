@@ -7,7 +7,7 @@ public:
     int data;
     Node *left;
     Node *right;
-   
+
     Node(int val)
     {
         this->data = val;
@@ -65,35 +65,36 @@ void printPostOrder(Node *node)
     printPostOrder(node->right);
     cout << node->data << " ";
 }
-void insertElement(Node *node){
 
-}
-
-Node* searchTree(Node* root, int key){
-    if( root == NULL || root->data == key ){ //handle root is null first
+Node *searchTree(Node *root, int key)
+{
+    if (root == NULL || root->data == key)
+    { // handle root is null first
         return root;
     }
 
-    if(key>root->data)
-        searchTree(root->right,key);
-    
-    else
-        searchTree(root->left,key);
+    if (key > root->data)
+        searchTree(root->right, key);
 
+    else
+        searchTree(root->left, key);
 }
 
-Node* insertEle(Node* root,int val){
-    if(root == NULL){
+Node *insertEle(Node *root, int val)
+{
+    if (root == NULL)
+    {
         return new Node(val);
     }
-    
+
     if (val > root->data)
-        root->right = insertEle(root->right,val);
-    else if(val<root->data)
-        root->left = insertEle(root->left,val);
-    
+        root->right = insertEle(root->right, val);
+    else if (val < root->data)
+        root->left = insertEle(root->left, val);
+
     return root;
 }
+
 int main()
 {
     //     // create a root node
@@ -117,23 +118,23 @@ int main()
     root->right->left = new Node(150);
     root->right->right = new Node(300);
 
-    insertEle(root,301);
+    insertEle(root, 301);
 
     // printInorder(root);
     // cout << endl;
     // printPreOrder(root);
     // cout << endl;
     printPostOrder(root);
-    cout <<endl;
+    cout << endl;
 
-
-    if(searchTree(root,300)){
-        cout <<"Key found !";
+    if (searchTree(root, 300))
+    {
+        cout << "Key found !";
     }
-    else{
-        cout <<"Key not found !";
+    else
+    {
+        cout << "Key not found !";
     }
-    
 
     return 0;
 }

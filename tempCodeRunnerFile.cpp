@@ -1,2 +1,0 @@
-
-            smallest = arr[i];

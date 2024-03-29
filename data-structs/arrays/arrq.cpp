@@ -271,104 +271,178 @@
 
 // merge alternatively
 
-
 // not working
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// void mergeAlt(int arr[], int brr[], int crr[], int n, int m)
+// {
+//     int index = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         crr[index] = arr[i];
+//         index = index + 2;
+//     }
+//     index = 1;
+//     for (int i = 0; i < m; i++)
+//     {
+//         crr[index] = brr[i];
+//         index = index + 2;
+//     }
+// }
+// void display(int arr[], int n)
+
+// {
+//     for (int i = 0; i < n; i++)
+//         cout << arr[i] << " ";
+// }
+// int mergeS(int arr[], int brr[], int n, int m)
+// {
+
+//     int crr[n + m] = {};
+//     for (int i = 0; i < n; i++)
+//         crr[i] = arr[i];
+
+//     for (int i = n; i < n + m; i++)
+//     {
+//         crr[i] = brr[i - n];
+//     }
+//     return crr[n+m];
+// }
+
+// void bubbleSort(int arr[],int n){
+//       int counter = 1;
+//     while (counter < n)
+//     {
+//         for (int i = 0; i <= counter; i++)
+//         {
+//             if (arr[i] > arr[i + 1])
+//                 swap(arr[i], arr[i + 1]);
+//         }
+//         counter++;
+//     }
+// }
+
+// void sortOddEvenAscDesc(int arr[], int n)
+
+// {
+
+//     int f = 3;
+//     int g = 3;
+//     int brr[f];
+//     int crr[g];
+
+//     int index = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         brr[i] = arr[index];
+//         index += 2;
+//     }
+//     index = 1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         crr[i] = arr[index];
+//         index += 2;
+//     }
+
+//     sort(brr, brr + f);
+//     bubbleSort(crr,g);
+
+//     // merging both
+
+//    mergeS(crr,brr,3,3);
+//    display(arr,n);
+
+// }
+
+// int main()
+// {
+//     int n = 6;
+//     // int m = 5;
+//     int arr[n] = {59, 56, 112, 48, 78, 2};
+//     // int brr[m] = {52, 48, 63, 448, 15};
+//     // int crr[n + m];
+
+//     // mergeAlt(arr,brr,crr,n,m);
+//     // display(crr, n + m);
+//     sortOddEvenAscDesc(arr, n);
+//     // display(arr, n);
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int removeDuplicates(int arr[], int n)
+// {
+//     int count = 1;
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         if (arr[i] != arr[i + 1])
+//         {
+//             arr[count] = arr[i + 1];
+//             count++;
+//         }
+//     }
+
+//     cout << endl;
+//     return count;
+// }
+
+// int main()
+// {
+//     int n = 8;
+//     int arr[8] = {1, 1, 2, 2, 3, 3, 4, 4};
+//     int count = removeDuplicates(arr, n);
+
+// }
+
 #include <iostream>
+#include <string>
 #include <algorithm>
+
 using namespace std;
 
-void mergeAlt(int arr[], int brr[], int crr[], int n, int m)
+bool checkReverse(char arr[], int n)
 {
-    int index = 0;
-    for (int i = 0; i < n; i++)
-    {
-        crr[index] = arr[i];
-        index = index + 2;
-    }
-    index = 1;
-    for (int i = 0; i < m; i++)
-    {
-        crr[index] = brr[i];
-        index = index + 2;
-    }
-}
-void display(int arr[], int n)
-
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-}
-int mergeS(int arr[], int brr[], int n, int m)
-{
-
-    int crr[n + m] = {};
-    for (int i = 0; i < n; i++)
-        crr[i] = arr[i];
-
-    for (int i = n; i < n + m; i++)
-    {
-        crr[i] = brr[i - n];
-    }
-    return crr[n+m];
-}
-
-void bubbleSort(int arr[],int n){
-      int counter = 1;
-    while (counter < n)
-    {
-        for (int i = 0; i <= counter; i++)
-        {
-            if (arr[i] > arr[i + 1])
-                swap(arr[i], arr[i + 1]);
+    char brr[n];
+    int s = 0;
+    int e = n - 1;
+    while (s<=e){
+        if (arr[e] != arr[s]){
+            return false;
         }
-        counter++;
+        s++;
+        e--;
     }
-}
-
-void sortOddEvenAscDesc(int arr[], int n)
-
-{
-
-    int f = 3;
-    int g = 3;
-    int brr[f];
-    int crr[g];
-
-    int index = 0;
-    for (int i = 0; i < n; i++)
-    {
-        brr[i] = arr[index];
-        index += 2;
-    }
-    index = 1;
-    for (int i = 0; i < n; i++)
-    {
-        crr[i] = arr[index];
-        index += 2;
-    }
-
-    sort(brr, brr + f);
-    bubbleSort(crr,g);
-
-    // merging both
-
-   mergeS(crr,brr,3,3);
-   display(arr,n);
-
+    return true;
     
-}
 
+}
 int main()
 {
-    int n = 6;
-    // int m = 5;
-    int arr[n] = {59, 56, 112, 48, 78, 2};
-    // int brr[m] = {52, 48, 63, 448, 15};
-    // int crr[n + m];
+    string str = "facecar";
+    char arr[str.length()];
+    int n =5;
+    int brr [5] = {11,48,28,548,6};
 
-    // mergeAlt(arr,brr,crr,n,m);
-    // display(crr, n + m);
-    sortOddEvenAscDesc(arr, n);
-    // display(arr, n);
+    for (int i = 0; i < str.length(); i++)
+    {
+        arr[i] = str[i];
+    }
+    sort(brr,brr+n,greater<int>());
+   
+
+//    if (checkReverse(arr,str.length()) == true)
+//         cout << "true";
+//     else{
+//         cout <<"false";
+//     }
+
+for (int i = 0;i<n;i++){
+    cout << brr[i]<<" ";
+}
+   
     return 0;
 }

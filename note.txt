@@ -1,22 +1,45 @@
-Array Problem statements -
+------------------------
+Array Problem statements
+------------------------
 
-Merge two arrays- done
-search element-done
-delete element-done
-sort array-done
-rotate array-done
-find max min in an array-done
-find uniq elements in array-done
-merge two arrays into third with alternate elements -done
 
-find frequency of an element - q
-sort even indexed element in asc and odd in desc -q
-remove duplicates from array and merge
-reads two sets of strings from the user, merges them into a single array,
+DONE : 
+-------
+Merge two arrays    
+search element   
+delete element   
+sort array   
+rotate array   
+find max min in an array   
+merge two arrays into third with alternate elements    
+check if char array is palindrome    
+reads two sets of strings from the user, merges them into a single array,   
+sort in descending order   
+remove element from array at a certain position     
+find uniq elements in array
+remove duplicates from array and merge     
+LEARN VECTOR
+take two arrays compare elements if same then del from first cout << first arr
+copy all element from array to another except one index .
+
+ISSUES   
+-------
+find frequency of an element    
+sort even indexed element in asc and odd in desc   
+
+
+   
+
+
+NOT DONE
+---------
 merge n arrays
 
 
 
-extras - 
-    learn to sort in descending order
+
+
+
+
+
     

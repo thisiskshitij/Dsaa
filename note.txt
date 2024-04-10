@@ -5,22 +5,26 @@ Array Problem statements
 
 DONE : 
 -------
-Merge two arrays    
-search element   
-delete element   
-sort array   
+Insert array -d
+Merge two arrays -d
+search element -d 
+delete element -d  
+sort array  -d
 rotate array   
-find max min in an array   
-merge two arrays into third with alternate elements    
-check if char array is palindrome    
-reads two sets of strings from the user, merges them into a single array,   
-sort in descending order   
-remove element from array at a certain position     
-find uniq elements in array
+find max min in an array   -d
+sort in descending order -d
+remove element from array at a certain position  -d   
+merge two arrays into third with alternate elements -d
+check if char array is palindrome  -d
+take two arrays compare elements if same then del from first cout << first arr -d
+reads two sets of strings from the user, merges them into a single array -d 
+copy all element from array to another except one index .-d
 remove duplicates from array and merge     
+find uniq elements in array
+
+
+
 LEARN VECTOR
-take two arrays compare elements if same then del from first cout << first arr
-copy all element from array to another except one index .
 
 ISSUES   
 -------
